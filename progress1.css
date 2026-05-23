@@ -1,0 +1,422 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
+:root{
+--border:#1f8b98;
+--cyan:#58d6e6;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+background: linear-gradient(135deg, #0D6D77, #1B7F8A, #83C5BE);
+background-size:cover;
+font-family:Arial, sans-serif;
+min-height:100vh;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+position:absolute;
+left:30px;
+top:20px;
+width:320px;
+max-width:90%;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+text-align:center;
+color:#ffffff;
+font-size:60px;
+text-shadow:2px 2px 10px rgba(0,0,0,0.4);
+margin-top:30px;
+padding:0 10px;
+}
+
+/* =========================
+   STUDENT NAME
+========================= */
+
+.student{
+width:60%;
+margin:30px auto;
+font-size:22px;
+color:#fff;
+text-align:center;
+line-height:1.5;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+position:sticky;
+top:0;
+left:0;
+z-index:1000;
+border-bottom:1px solid rgba(3, 78, 90, 0.2);
+background: rgba(1, 55, 61, 0.93);
+backdrop-filter: blur(16px);
+box-shadow:0 6px 20px rgba(4, 51, 58, 0.778);
+animation:slideDown .5s ease;
+}
+
+@keyframes slideDown{
+from{
+opacity:0;
+transform:translateY(-15px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* =========================
+   LOGO TEXT
+========================= */
+
+.logo-section h2{
+font-size:30px;
+background: linear-gradient(45deg, #fdffff, #1891a6);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+transition:.3s;
+font-size:18px;
+font-weight:500;
+}
+
+.nav-links a:hover{
+transform:translateY(2px);
+color:yellowgreen;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile img{
+width:45px;
+height:45px;
+border-radius:50%;
+border:2px solid var(--cyan);
+transition:.3s;
+}
+
+.profile img:hover{
+transform:scale(1.08);
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.marks-table{
+width:60%;
+margin:30px auto;
+background: linear-gradient(145deg, #ffffff, #f3f7f7);
+border-radius:18px;
+padding:20px;
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
+border-collapse:collapse;
+overflow:hidden;
+}
+
+/* =========================
+   TABLE HEAD
+========================= */
+
+.marks-table th{
+background: linear-gradient(135deg, #0D6D77, #1B7F8A);
+color:white;
+padding:14px;
+font-size:18px;
+}
+
+/* =========================
+   TABLE DATA
+========================= */
+
+.marks-table td{
+padding:14px;
+text-align:center;
+font-size:18px;
+color:#180707;
+}
+
+/* =========================
+   ROW STYLE
+========================= */
+
+.marks-table tr{
+transition:0.3s;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.marks-table tr:hover{
+background: linear-gradient(135deg, #E0F0F0, #68e9cf);
+transform:scale(1.01);
+}
+
+/* =========================
+   BORDERS
+========================= */
+
+.marks-table th,
+.marks-table td{
+border-bottom:1px solid #ddd;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+background:#1E1E1E;
+color:white;
+margin-top:50px;
+padding-top:40px;
+}
+
+.footer-container{
+width:90%;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.footer-section{
+width:220px;
+margin-bottom:30px;
+}
+
+.footer-section h3{
+margin-bottom:15px;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+}
+
+.footer-section ul li{
+margin-bottom:8px;
+}
+
+.footer-section ul li a{
+color:#ccc;
+text-decoration:none;
+}
+
+.footer-section ul li a:hover{
+color:#FFD6A5;
+}
+
+.footer-bottom{
+text-align:center;
+border-top:1px solid #444;
+padding:15px;
+margin-top:20px;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media screen and (max-width:992px){
+
+.title{
+font-size:48px;
+}
+
+.student{
+width:85%;
+font-size:20px;
+}
+
+.navbar{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.marks-table{
+width:90%;
+}
+
+.footer-container{
+justify-content:center;
+}
+
+.footer-section{
+width:45%;
+}
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media screen and (max-width:768px){
+
+.title{
+font-size:38px;
+margin-top:20px;
+}
+
+.student{
+width:95%;
+font-size:18px;
+}
+
+.logo{
+position:static;
+display:block;
+margin:auto;
+width:200px;
+margin-top:20px;
+}
+
+.nav-links{
+flex-direction:column;
+align-items:center;
+gap:12px;
+}
+
+.nav-links a{
+font-size:16px;
+}
+
+.logo-section h2{
+font-size:25px;
+}
+
+.profile img{
+width:40px;
+height:40px;
+}
+
+/* TABLE MOBILE */
+
+.marks-table{
+width:95%;
+display:block;
+overflow-x:auto;
+white-space:nowrap;
+padding:10px;
+}
+
+.marks-table th,
+.marks-table td{
+font-size:15px;
+padding:10px;
+}
+
+.footer-container{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.footer-section{
+width:100%;
+}
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media screen and (max-width:480px){
+
+.title{
+font-size:30px;
+}
+
+.student{
+font-size:16px;
+}
+
+.logo{
+width:160px;
+}
+
+.navbar{
+padding:15px;
+}
+
+.logo-section h2{
+font-size:22px;
+}
+
+.nav-links a{
+font-size:15px;
+}
+
+.marks-table th,
+.marks-table td{
+font-size:14px;
+padding:8px;
+}
+
+.footer-bottom{
+font-size:14px;
+}
+
+}
